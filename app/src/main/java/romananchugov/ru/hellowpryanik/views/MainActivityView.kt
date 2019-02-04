@@ -5,6 +5,6 @@ import romananchugov.ru.hellowpryanik.network.ViewDataModel
 
 interface MainActivityView:MvpView {
     fun addTextView(data:ViewDataModel)
-    fun addImage(data:ViewDataModel)
+    fun addImageView(data:ViewDataModel)
     fun addRadioGroup(data:ViewDataModel)
 }

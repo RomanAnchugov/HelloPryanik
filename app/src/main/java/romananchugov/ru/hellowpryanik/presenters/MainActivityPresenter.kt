@@ -33,8 +33,8 @@ class MainActivityPresenter : MvpPresenter<MainActivityView>() {
                     result.viewOrder.forEach {
                         when(it){
                             Constants.TEXT_VIEW_KEY -> viewState.addTextView(result.getTextViewData())
-                            Constants.IMAGE_VIEW_KEY -> viewState.addImage(result.getImageViewData())
-                            Constants.RADIO_GROUP_KEY -> viewState.addImage(result.getRadioGroupData())
+                            Constants.IMAGE_VIEW_KEY -> viewState.addImageView(result.getImageViewData())
+                            Constants.RADIO_GROUP_KEY -> viewState.addRadioGroup(result.getRadioGroupData())
                         }
                     }
                 },
