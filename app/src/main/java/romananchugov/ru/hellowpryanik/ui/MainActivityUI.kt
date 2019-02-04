@@ -4,10 +4,12 @@ import android.widget.LinearLayout
 import org.jetbrains.anko.*
 import romananchugov.ru.hellowpryanik.MainActivity
 
-class MainActivityUI : AnkoComponent<MainActivity>{
+class MainActivityUI : AnkoComponent<MainActivity> {
 
     lateinit var linearLayout: LinearLayout
-    override fun createView(ui: AnkoContext<MainActivity>) = with(ui){
+
+
+    override fun createView(ui: AnkoContext<MainActivity>) = with(ui) {
         linearLayout = verticalLayout {
             padding = dip(30)
         }
