@@ -8,11 +8,11 @@ class MainActivityUI : AnkoComponent<MainActivity> {
 
     lateinit var linearLayout: LinearLayout
 
-
     override fun createView(ui: AnkoContext<MainActivity>) = with(ui) {
-        linearLayout = verticalLayout {
-            padding = dip(30)
+        scrollView {
+            linearLayout = verticalLayout {
+                padding = dip(30)
+            }
         }
-        linearLayout
     }
 }
