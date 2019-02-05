@@ -3,6 +3,8 @@ package romananchugov.ru.hellowpryanik
 import android.os.Bundle
 import com.arellomobile.mvp.MvpAppCompatActivity
 import com.arellomobile.mvp.presenter.InjectPresenter
+import com.bumptech.glide.Glide
+import org.jetbrains.anko.imageView
 import org.jetbrains.anko.setContentView
 import org.jetbrains.anko.textView
 import romananchugov.ru.hellowpryanik.di.DaggerAppComponent
@@ -39,6 +41,10 @@ class MainActivity : MvpAppCompatActivity(), MainActivityView {
 
     override fun addImageView(data: ViewDataModel) {
         Timber.i("Add ImageView text = ${data.text}; url = ${data.url}")
+        activityUI.linearLayout.apply {
+            val imageView = imageView(R.drawable.ic_launcher_foreground)
+            Glide.with(this).load(data.url).into(imageView)
+        }
     }
 
     override fun addRadioGroup(data: ViewDataModel) {
